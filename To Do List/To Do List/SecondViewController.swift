@@ -10,8 +10,16 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet var toDoItem: UITextField!
+    
+    @IBAction func addToDoItem(sender: AnyObject) {
+        toDoList.append(toDoItem.text!)
+        toDoItem.text = nil
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
